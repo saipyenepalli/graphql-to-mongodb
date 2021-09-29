@@ -19,7 +19,7 @@ function getGraphQLSortTypeObject(type: GraphQLType, ...excludedFields): GraphQL
     }
 
     if(type instanceof GraphQLList) {
-        return GraphQLSortType;
+        return getGraphQLSortType(type, ...excludedFields);
     }
     
     return undefined;
