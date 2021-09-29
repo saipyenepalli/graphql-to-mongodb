@@ -85,7 +85,7 @@ export const getMongoDbFilter = logOnError((graphQLType: GraphQLFieldsType, grap
     return filter;
 });
 
-function parseMongoDbFilter(type: GraphQLFieldsType, graphQLFilter: GraphQLObjectFilter, ...excludedFields: string[]): MongoDbObjectFilter {
+function parseMongoDbFilter(type: GraphQLFieldsType, graphQLFilter: GraphQLObjectFilter | GraphQLLeafFilter, ...excludedFields: string[]): MongoDbObjectFilter {
     const typeFields = getTypeFields(type)();
 
     return Object.keys(graphQLFilter)
@@ -124,7 +124,7 @@ function parseMongoDbFilter(type: GraphQLFieldsType, graphQLFilter: GraphQLObjec
         }, {} as MongoDbObjectFilter);
 }
 
-function parseMongoExistsFilter(exists: 'exists' | 'not_exists'): { $exists: boolean } {
+function parseMongoExistsFilter(exists: MongoDbLeafOperators | "exists" | "not_exists"): { $exists: boolean } {
     return { $exists: exists === 'exists' ? true : false };
 }
 
