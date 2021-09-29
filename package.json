@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Soluto/graphql-to-mongodb.git"
+    "url": "git+https://github.com/saipyenepalli/graphql-to-mongodb.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Soluto/graphql-to-mongodb/issues"
+    "url": "https://github.com/saipyenepalli/graphql-to-mongodb/issues"
   },
-  "homepage": "https://github.com/Soluto/graphql-to-mongodb#readme",
+  "homepage": "https://github.com/saipyenepalli/graphql-to-mongodb#readme",
   "devDependencies": {
     "@types/chai": "^4.1.4",
     "@types/graphql": "^14.2.0",
